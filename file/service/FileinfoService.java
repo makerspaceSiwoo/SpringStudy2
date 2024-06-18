@@ -1,5 +1,7 @@
 package com.spring.file.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,4 +20,11 @@ public class FileinfoService {
 		return x;
 	}
 	
+	public List<FileinfoDto> fileList(){
+		return fdao.fileList();
+	}
+	
+	public FileinfoDto fileOne(int id) {
+		return fdao.fileOne(id);
+	}
 }
